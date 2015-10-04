@@ -1,5 +1,5 @@
-Neuroinformatics Initiative Compute Cluster
-===========================================
+Resources
+=========
 
 Compute server
 --------------
