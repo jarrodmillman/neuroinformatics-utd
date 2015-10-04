@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Neuroinformatics Initiative Compute Cluster &mdash; Neuroinformatics Initiative 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Neuroinformatics Initiative 0.1 documentation" href="index.html" />
+    <link rel="next" title="Timeline" href="timeline.html" />
+    <link rel="prev" title="Neuroinformatics Initiative" href="index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="timeline.html" title="Timeline"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Neuroinformatics Initiative"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Neuroinformatics Initiative 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="neuroinformatics-initiative-compute-cluster">
+<h1>Neuroinformatics Initiative Compute Cluster<a class="headerlink" href="#neuroinformatics-initiative-compute-cluster" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="compute-server">
+<h2>Compute server<a class="headerlink" href="#compute-server" title="Permalink to this headline">¶</a></h2>
+<p>The compute server has two 12-core Intel Xeon E5-2680v3 (Haswell-EP)
+processors with 192GB of DDR4-2133 ECC RAM running CentOS 7.1.</p>
+</div>
+<div class="section" id="raid-storage">
+<h2>RAID storage<a class="headerlink" href="#raid-storage" title="Permalink to this headline">¶</a></h2>
+<p>The RAID storage unit is a JetStor NAS 724UX 10G. The unit has ten 8TB
+SAS enterprise Hitachi drives configured using RAID 6 with 1 hot spare. RAID
+6 uses 2 drives for redundancy, which means that 3 drives would need to fail
+before you would lose any data. In the event that a drive did fail, the RAID
+unit would immediately start using the hot spare instead of the failed disk.</p>
+<p>The RAID drives use ZFS. ZFS is an advanced filesystem supporting (among other
+features) protection against data corruption, support for high storage capacities,
+efficient data compression, integration of the concepts of filesystem and volume
+management, snapshots and copy-on-write clones, continuous integrity checking
+and automatic repair. The unit exports the filesystem using NFS version 3.</p>
+<p>In the near future, we double the capacity of the unit with additional harddrives
+and will add SSD Caching to boost random I/O intensive application.</p>
+</div>
+<div class="section" id="secure-access">
+<h2>Secure access<a class="headerlink" href="#secure-access" title="Permalink to this headline">¶</a></h2>
+<p>The only way to access the compute cluster from the internet is over Secure
+Shell (SSH). SSH is the standard cryptographic (encrypted) network protocol
+for (secure) text-based shell sessions on remote machines.</p>
+<p>Remote graphical desktop access is enabled via X2Go. X2Go is a remote desktop
+solution, which is securely tunneled over SSH. It works well over both low
+bandwidth and high bandwidth connections and has the ability to disconnect
+and reconnect to a session, even from another client. You can connect from a
+computer running Linux, Windows or Mac OS X.</p>
+<p>We use Fail2ban, an intrusion prevention software framework, to protect the
+system from brute-force attack.</p>
+</div>
+<div class="section" id="network">
+<h2>Network<a class="headerlink" href="#network" title="Permalink to this headline">¶</a></h2>
+<p>Currently the compute server and RAID storage are connected over 1 Gigabit
+Ethernet. In the near future, this will be upgraded to a 10 Gigabit Ethernet
+network.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Neuroinformatics Initiative Compute Cluster</a><ul>
+<li><a class="reference internal" href="#compute-server">Compute server</a></li>
+<li><a class="reference internal" href="#raid-storage">RAID storage</a></li>
+<li><a class="reference internal" href="#secure-access">Secure access</a></li>
+<li><a class="reference internal" href="#network">Network</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Neuroinformatics Initiative</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="timeline.html"
+                        title="next chapter">Timeline</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, K. Jarrod Millman.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.3</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
