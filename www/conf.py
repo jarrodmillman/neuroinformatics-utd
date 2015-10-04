@@ -48,7 +48,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Neuroinformatics Initiative'
+project = u'Home'
 copyright = u'2015, K. Jarrod Millman'
 author = u'K. Jarrod Millman'
 
@@ -116,13 +116,17 @@ html_theme = 'alabaster'
 # further.  For a list of options available for each theme, see the
 # documentation.
 #html_theme_options = {}
+html_theme_options = {
+    'description': 'Neuroinformatics @ UTD',
+    'github_button': False,
+}
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-#html_title = None
+html_title = "Neuroinformatics @ UTD"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -156,6 +160,14 @@ html_static_path = ['_static']
 
 # Custom sidebar templates, maps document names to template names.
 #html_sidebars = {}
+html_sidebars = {
+    '**': [
+        'about.html',
+        'navigation.html',
+        'searchbox.html',
+    ]
+}
+
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
